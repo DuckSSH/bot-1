@@ -65,48 +65,48 @@ enviarapp() {
         --document "@/root/base.apk" \
     return 0
 }
-#vivo sks
-vivosks() {
+#enviar app
+enviarapp() {
     ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
         --text "♻️ ENVIANDO ARQUIVO SKS..."
     ShellBot.sendDocument --chat_id ${callback_query_message_chat_id} \
         --document "@/root/vivo.sks" \
     return 0
 }
-#vivo ehi
-vivoehi() {
+#enviar app
+enviarapp() {
     ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
         --text "♻️ ENVIANDO ARQUIVO EHI..."
     ShellBot.sendDocument --chat_id ${callback_query_message_chat_id} \
         --document "@/root/vivo.ehi" \
     return 0
 }
-#tim sks
-timsks() {
+#enviar app
+enviarapp() {
     ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
         --text "♻️ ENVIANDO ARQUIVO SKS..."
     ShellBot.sendDocument --chat_id ${callback_query_message_chat_id} \
         --document "@/root/tim.sks" \
     return 0
 }
-#tim ehi
-timehi() {
+#enviar app
+enviarapp() {
     ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
         --text "♻️ ENVIANDO ARQUIVO EHI..."
     ShellBot.sendDocument --chat_id ${callback_query_message_chat_id} \
         --document "@/root/tim.ehi" \
     return 0
 }
-#claro sks
-clarosks() {
+#enviar app
+enviarapp() {
     ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
         --text "♻️ ENVIANDO ARQUIVO SKS..."
     ShellBot.sendDocument --chat_id ${callback_query_message_chat_id} \
         --document "@/root/claro.sks" \
     return 0
 }
-#claro ehi
-claroehi() {
+#enviar app
+enviarapp() {
     ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
         --text "♻️ ENVIANDO ARQUIVO EHI..."
     ShellBot.sendDocument --chat_id ${callback_query_message_chat_id} \
@@ -137,12 +137,12 @@ ShellBot.InlineKeyboardButton --button 'botao1' --line 5 --text '🔰 CLARO EHI 
 ShellBot.InlineKeyboardButton --button 'botao1' --line 6 --text '👨‍💻COMPRE AQUI👨‍💻'  --callback_data '2' --url 't.me/Onumb_bot' # privado
 ShellBot.regHandleFunction --function criarteste --callback_data gerarssh
 ShellBot.regHandleFunction --function enviarapp --callback_data appenviar
-ShellBot.regHandleFunction --function vivosks --callback_data sksvivo
-ShellBot.regHandleFunction --function vivoehi --callback_data ehivivo
-ShellBot.regHandleFunction --function timsks --callback_data skstim
-ShellBot.regHandleFunction --function timehi --callback_data ehitim
-ShellBot.regHandleFunction --function clarosks --callback_data sksclaro
-ShellBot.regHandleFunction --function claroehi --callback_data ehiclaro
+ShellBot.regHandleFunction --function enviarapp --callback_data appenviar
+ShellBot.regHandleFunction --function enviarapp --callback_data appenviar
+ShellBot.regHandleFunction --function enviarapp --callback_data appenviar
+ShellBot.regHandleFunction --function enviarapp --callback_data appenviar
+ShellBot.regHandleFunction --function enviarapp --callback_data appenviar
+ShellBot.regHandleFunction --function enviarapp --callback_data appenviar
 unset keyboard1
 keyboard1="$(ShellBot.InlineKeyboardMarkup -b 'botao1')"
 while :; do
