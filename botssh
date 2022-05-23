@@ -67,42 +67,12 @@ enviarapp() {
     
 }
     
-#claro sks
-clarosks() {
-    ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
-        --text "♻️ ENVIANDO ARQUIVO SKS..."
-    ShellBot.sendDocument --chat_id ${callback_query_message_chat_id} \
-        --document "@/root/Claro.sks" \
-    return 0
-    
-}
-    
 #vivo sks
 vivosks() {
     ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
         --text "♻️ ENVIANDO ARQUIVO SKS..."
     ShellBot.sendDocument --chat_id ${callback_query_message_chat_id} \
-        --document "@/root/Vivo.sks" \
-    return 0
-    
-}
-    
-#tim sks
-timsks() {
-    ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
-        --text "♻️ ENVIANDO ARQUIVO SKS..."
-    ShellBot.sendDocument --chat_id ${callback_query_message_chat_id} \
-        --document "@/root/Tim.sks" \
-    return 0
-    
-}
-    
-#claro ehi
-claroehi() {
-    ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
-        --text "♻️ ENVIANDO ARQUIVO EHI..."
-    ShellBot.sendDocument --chat_id ${callback_query_message_chat_id} \
-        --document "@/root/Claro.ehi" \
+        --document "@/root/vivo.sks" \
     return 0
     
 }
@@ -112,7 +82,17 @@ vivoehi() {
     ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
         --text "♻️ ENVIANDO ARQUIVO EHI..."
     ShellBot.sendDocument --chat_id ${callback_query_message_chat_id} \
-        --document "@/root/Vivo.ehi" \
+        --document "@/root/vivo.ehi" \
+    return 0
+    
+}
+    
+#tim sks
+timsks() {
+    ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
+        --text "♻️ ENVIANDO ARQUIVO SKS..."
+    ShellBot.sendDocument --chat_id ${callback_query_message_chat_id} \
+        --document "@/root/tim.sks" \
     return 0
     
 }
@@ -122,11 +102,31 @@ timehi() {
     ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
         --text "♻️ ENVIANDO ARQUIVO EHI..."
     ShellBot.sendDocument --chat_id ${callback_query_message_chat_id} \
-        --document "@/root/Tim.ehi" \
+        --document "@/root/tim.ehi" \
+    return 0
+    
+}
+    
+#claro sks
+clarosks() {
+    ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
+        --text "♻️ ENVIANDO ARQUIVO SKS..."
+    ShellBot.sendDocument --chat_id ${callback_query_message_chat_id} \
+        --document "@/root/claro.sks" \
+    return 0
+    
+}
+    
+#claro ehi
+claroehi() {
+    ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
+        --text "♻️ ENVIANDO ARQUIVO EHI..."
+    ShellBot.sendDocument --chat_id ${callback_query_message_chat_id} \
+        --document "@/root/claro.ehi" \
     return 0
 
 
-    }
+}
 
 #informacoes usuario
 infouser () {
