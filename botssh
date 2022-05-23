@@ -126,7 +126,7 @@ claroehi() {
     return 0
 
 
-}
+    }
 
 #informacoes usuario
 infouser () {
