@@ -60,7 +60,7 @@ rm -rf /etc/SSHPlus/userteste/$usuario.sh" > /etc/SSHPlus/userteste/$usuario.sh
 #enviar app
 enviarapp() {
     ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
-        --text "♻️ ENVIANDO APLICATIVO, AGUARDE..."
+        --text "♻️ ENVIANDO APLICATIVO"
     ShellBot.sendDocument --chat_id ${callback_query_message_chat_id} \
         --document "@/root/base.apk" \
     return 0
@@ -144,8 +144,8 @@ ShellBot.InlineKeyboardButton --button 'botao1' --line 3 --text '🔰 ARQUIVOS S
 ShellBot.InlineKeyboardButton --button 'botao1' --line 4 --text '🔰 ARQUIVOS EHI 🔰' --callback_data 'ehienviar'
 ShellBot.regHandleFunction --function criarteste --callback_data gerarssh
 ShellBot.regHandleFunction --function enviarapp --callback_data appenviar
-ShellBot.regHandleFunction --function enviarsks --callback_data enviarsks
-ShellBot.regHandleFunction --function enviarehi --callback_data enviarehi
+ShellBot.regHandleFunction --function enviarsks --callback_data sksenviar
+ShellBot.regHandleFunction --function enviarehi --callback_data ehienviar
 unset keyboard1
 keyboard1="$(ShellBot.InlineKeyboardMarkup -b 'botao1')"
 while :; do
