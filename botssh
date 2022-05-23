@@ -78,7 +78,7 @@ enviarsks3() {
 }
     
 #enviar sks
-enviarsks() {
+enviarsks5() {
     ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
         --text "♻️ ENVIANDO ARQUIVO SKS..."
     ShellBot.sendDocument --chat_id ${callback_query_message_chat_id} \
@@ -88,7 +88,7 @@ enviarsks() {
 }
     
 #enviar sks
-enviarsks() {
+enviarsks1() {
     ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
         --text "♻️ ENVIANDO ARQUIVO SKS..."
     ShellBot.sendDocument --chat_id ${callback_query_message_chat_id} \
@@ -108,7 +108,7 @@ enviarehi4() {
 }
     
 #enviar ehi
-enviarehi() {
+enviarehi6() {
     ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
         --text "♻️ ENVIANDO ARQUIVO EHI..."
     ShellBot.sendDocument --chat_id ${callback_query_message_chat_id} \
@@ -118,7 +118,7 @@ enviarehi() {
 }
     
 #enviar ehi
-enviarehi() {
+enviarehi2() {
     ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
         --text "♻️ ENVIANDO ARQUIVO EHI..."
     ShellBot.sendDocument --chat_id ${callback_query_message_chat_id} \
@@ -140,16 +140,20 @@ unset botao1
 botao1=''
 ShellBot.InlineKeyboardButton --button 'botao1' --line 1 --text '♻️ GERAR TESTE ♻️' --callback_data 'gerarssh'
 ShellBot.InlineKeyboardButton --button 'botao1' --line 2 --text '🔰 BAIXAR APLICATIVO 🔰' --callback_data 'appenviar'
-ShellBot.InlineKeyboardButton --button 'botao1' --line 3 --text '🔰 TIM SKS 🔰' --callback_data 'sksenviar'
-ShellBot.InlineKeyboardButton --button 'botao1' --line 3 --text '🔰 TIM EHI 🔰' --callback_data 'ehienviar'
-ShellBot.InlineKeyboardButton --button 'botao1' --line 3 --text '🔰 CLARO SKS 🔰' --callback_data '3sksenviar'
-ShellBot.InlineKeyboardButton --button 'botao1' --line 3 --text '🔰 CLARO EHI 🔰' --callback_data '4ehienviar'
+ShellBot.InlineKeyboardButton --button 'botao1' --line 3 --text '🔰 TIM SKS 🔰' --callback_data '1sksenviar'
+ShellBot.InlineKeyboardButton --button 'botao1' --line 3 --text '🔰 TIM EHI 🔰' --callback_data '2ehienviar'
+ShellBot.InlineKeyboardButton --button 'botao1' --line 4 --text '🔰 CLARO SKS 🔰' --callback_data '3sksenviar'
+ShellBot.InlineKeyboardButton --button 'botao1' --line 4 --text '🔰 CLARO EHI 🔰' --callback_data '4ehienviar'
+ShellBot.InlineKeyboardButton --button 'botao1' --line 5 --text '🔰 VIVO SKS 🔰' --callback_data '5sksenviar'
+ShellBot.InlineKeyboardButton --button 'botao1' --line 5 --text '🔰 VIVO EHI 🔰' --callback_data '6ehienviar'
 ShellBot.regHandleFunction --function criarteste --callback_data gerarssh
 ShellBot.regHandleFunction --function enviarapp --callback_data appenviar
-ShellBot.regHandleFunction --function enviarsks --callback_data sksenviar
-ShellBot.regHandleFunction --function enviarehi --callback_data ehienviar
+ShellBot.regHandleFunction --function enviarsks1 --callback_data 1sksenviar
+ShellBot.regHandleFunction --function enviarehi2 --callback_data 2ehienviar
 ShellBot.regHandleFunction --function enviarsks3 --callback_data 3sksenviar
 ShellBot.regHandleFunction --function enviarehi4 --callback_data 4ehienviar
+ShellBot.regHandleFunction --function enviarsks5 --callback_data 5sksenviar
+ShellBot.regHandleFunction --function enviarehi6 --callback_data 6ehienviar
 unset keyboard1
 keyboard1="$(ShellBot.InlineKeyboardMarkup -b 'botao1')"
 while :; do
