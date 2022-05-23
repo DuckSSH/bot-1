@@ -67,7 +67,7 @@ enviarapp() {
     
 }
     
-#enviar sks
+#claro sks
 clarosks() {
     ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
         --text "♻️ ENVIANDO ARQUIVO SKS..."
@@ -77,7 +77,7 @@ clarosks() {
     
 }
     
-#enviar sks
+#vivo sks
 vivosks() {
     ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
         --text "♻️ ENVIANDO ARQUIVO SKS..."
@@ -87,7 +87,7 @@ vivosks() {
     
 }
     
-#enviar sks
+#tim sks
 timsks() {
     ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
         --text "♻️ ENVIANDO ARQUIVO SKS..."
@@ -97,7 +97,7 @@ timsks() {
     
 }
     
-#enviar ehi
+#claro ehi
 claroehi() {
     ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
         --text "♻️ ENVIANDO ARQUIVO EHI..."
@@ -107,7 +107,7 @@ claroehi() {
     
 }
     
-#enviar ehi
+#vivo ehi
 vivoehi() {
     ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
         --text "♻️ ENVIANDO ARQUIVO EHI..."
@@ -117,7 +117,7 @@ vivoehi() {
     
 }
     
-#enviar ehi
+#tim ehi
 timehi() {
     ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
         --text "♻️ ENVIANDO ARQUIVO EHI..."
@@ -146,6 +146,7 @@ ShellBot.InlineKeyboardButton --button 'botao1' --line 4 --text '🔰 TIM SKS �
 ShellBot.InlineKeyboardButton --button 'botao1' --line 4 --text '🔰 TIM EHI 🔰' --callback_data 'timehi'
 ShellBot.InlineKeyboardButton --button 'botao1' --line 5 --text '🔰 CLARO SKS 🔰' --callback_data 'clarosks'
 ShellBot.InlineKeyboardButton --button 'botao1' --line 5 --text '🔰 CLARO EHI 🔰' --callback_data 'claroehi'
+ShellBot.InlineKeyboardButton --button 'botao1' --line 6 --text '👨‍💻COMPRE AQUI👨‍💻'  --callback_data '2' --url 't.me/Onumb_bot' # privado
 ShellBot.regHandleFunction --function criarteste --callback_data gerarssh
 ShellBot.regHandleFunction --function enviarapp --callback_data appenviar
 ShellBot.regHandleFunction --function vivosks --callback_data sksvivo
