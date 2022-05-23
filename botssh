@@ -64,7 +64,7 @@ enviarapp() {
     ShellBot.sendDocument --chat_id ${callback_query_message_chat_id} \
         --document "@/root/base.apk" \
     return 0
-    
+}
     #vivo sks
 vivosks() {
     ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
@@ -72,7 +72,7 @@ vivosks() {
     ShellBot.sendDocument --chat_id ${callback_query_message_chat_id} \
         --document "@/root/vivo.sks" \
     return 0
-    
+}
 #vivo ehi
 vivoehi() {
     ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
@@ -80,7 +80,7 @@ vivoehi() {
     ShellBot.sendDocument --chat_id ${callback_query_message_chat_id} \
         --document "@/root/vivo.ehi" \
     return 0
-    
+}
 #tim sks
 timsks() {
     ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
@@ -88,7 +88,7 @@ timsks() {
     ShellBot.sendDocument --chat_id ${callback_query_message_chat_id} \
         --document "@/root/tim.sks" \
     return 0
-    
+}
 #tim ehi
 timehi() {
     ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
@@ -96,7 +96,7 @@ timehi() {
     ShellBot.sendDocument --chat_id ${callback_query_message_chat_id} \
         --document "@/root/tim.ehi" \
     return 0
-    
+}
 #claro sks
 clarosks() {
     ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
@@ -104,7 +104,7 @@ clarosks() {
     ShellBot.sendDocument --chat_id ${callback_query_message_chat_id} \
         --document "@/root/claro.sks" \
     return 0
-    
+}
 #claro ehi
 claroehi() {
     ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
