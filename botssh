@@ -64,16 +64,14 @@ enviarapp() {
     ShellBot.sendDocument --chat_id ${callback_query_message_chat_id} \
         --document "@/root/base.apk" \
     return 0
-}
     
-#vivo sks
+    #vivo sks
 vivosks() {
     ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
         --text "♻️ ENVIANDO ARQUIVO SKS..."
     ShellBot.sendDocument --chat_id ${callback_query_message_chat_id} \
         --document "@/root/vivo.sks" \
     return 0
-}
     
 #vivo ehi
 vivoehi() {
@@ -82,7 +80,6 @@ vivoehi() {
     ShellBot.sendDocument --chat_id ${callback_query_message_chat_id} \
         --document "@/root/vivo.ehi" \
     return 0
-}
     
 #tim sks
 timsks() {
@@ -91,7 +88,6 @@ timsks() {
     ShellBot.sendDocument --chat_id ${callback_query_message_chat_id} \
         --document "@/root/tim.sks" \
     return 0
-}
     
 #tim ehi
 timehi() {
@@ -100,7 +96,6 @@ timehi() {
     ShellBot.sendDocument --chat_id ${callback_query_message_chat_id} \
         --document "@/root/tim.ehi" \
     return 0
-}
     
 #claro sks
 clarosks() {
@@ -109,7 +104,6 @@ clarosks() {
     ShellBot.sendDocument --chat_id ${callback_query_message_chat_id} \
         --document "@/root/claro.sks" \
     return 0
-}
     
 #claro ehi
 claroehi() {
