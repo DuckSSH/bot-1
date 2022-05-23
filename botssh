@@ -60,7 +60,7 @@ rm -rf /etc/SSHPlus/userteste/$usuario.sh" > /etc/SSHPlus/userteste/$usuario.sh
 #enviar app
 enviarapp() {
     ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
-        --text "♻️ ENVIANDO APLICATIVO"
+        --text "♻️ ENVIANDO APLICATIVO..."
     ShellBot.sendDocument --chat_id ${callback_query_message_chat_id} \
         --document "@/root/base.apk" \
     return 0
@@ -68,7 +68,7 @@ enviarapp() {
 }
     
 #enviar sks
-enviarsks() {
+clarosks() {
     ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
         --text "♻️ ENVIANDO ARQUIVO SKS..."
     ShellBot.sendDocument --chat_id ${callback_query_message_chat_id} \
@@ -78,7 +78,7 @@ enviarsks() {
 }
     
 #enviar sks
-enviarsks() {
+vivosks() {
     ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
         --text "♻️ ENVIANDO ARQUIVO SKS..."
     ShellBot.sendDocument --chat_id ${callback_query_message_chat_id} \
@@ -88,7 +88,7 @@ enviarsks() {
 }
     
 #enviar sks
-enviarsks() {
+timsks() {
     ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
         --text "♻️ ENVIANDO ARQUIVO SKS..."
     ShellBot.sendDocument --chat_id ${callback_query_message_chat_id} \
@@ -98,7 +98,7 @@ enviarsks() {
 }
     
 #enviar ehi
-enviarehi() {
+claroehi() {
     ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
         --text "♻️ ENVIANDO ARQUIVO EHI..."
     ShellBot.sendDocument --chat_id ${callback_query_message_chat_id} \
@@ -108,7 +108,7 @@ enviarehi() {
 }
     
 #enviar ehi
-enviarehi() {
+vivoehi() {
     ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
         --text "♻️ ENVIANDO ARQUIVO EHI..."
     ShellBot.sendDocument --chat_id ${callback_query_message_chat_id} \
@@ -118,7 +118,7 @@ enviarehi() {
 }
     
 #enviar ehi
-enviarehi() {
+timehi() {
     ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
         --text "♻️ ENVIANDO ARQUIVO EHI..."
     ShellBot.sendDocument --chat_id ${callback_query_message_chat_id} \
@@ -140,12 +140,20 @@ unset botao1
 botao1=''
 ShellBot.InlineKeyboardButton --button 'botao1' --line 1 --text '♻️ GERAR TESTE ♻️' --callback_data 'gerarssh'
 ShellBot.InlineKeyboardButton --button 'botao1' --line 2 --text '🔰 BAIXAR APLICATIVO 🔰' --callback_data 'appenviar'
-ShellBot.InlineKeyboardButton --button 'botao1' --line 3 --text '🔰 ARQUIVOS SKS 🔰' --callback_data 'sksenviar'
-ShellBot.InlineKeyboardButton --button 'botao1' --line 4 --text '🔰 ARQUIVOS EHI 🔰' --callback_data 'ehienviar'
+ShellBot.InlineKeyboardButton --button 'botao1' --line 3 --text '🔰 VIVO SKS 🔰' --callback_data 'vivosks'
+ShellBot.InlineKeyboardButton --button 'botao1' --line 3 --text '🔰 VIVO EHI 🔰' --callback_data 'vivoehi'
+ShellBot.InlineKeyboardButton --button 'botao1' --line 4 --text '🔰 TIM SKS 🔰' --callback_data 'timsks'
+ShellBot.InlineKeyboardButton --button 'botao1' --line 4 --text '🔰 TIM EHI 🔰' --callback_data 'timehi'
+ShellBot.InlineKeyboardButton --button 'botao1' --line 5 --text '🔰 CLARO SKS 🔰' --callback_data 'clarosks'
+ShellBot.InlineKeyboardButton --button 'botao1' --line 5 --text '🔰 CLARO EHI 🔰' --callback_data 'claroehi'
 ShellBot.regHandleFunction --function criarteste --callback_data gerarssh
 ShellBot.regHandleFunction --function enviarapp --callback_data appenviar
-ShellBot.regHandleFunction --function enviarsks --callback_data sksenviar
-ShellBot.regHandleFunction --function enviarehi --callback_data ehienviar
+ShellBot.regHandleFunction --function vivosks --callback_data sksvivo
+ShellBot.regHandleFunction --function vivoehi --callback_data ehivivo
+ShellBot.regHandleFunction --function timsks --callback_data skstim
+ShellBot.regHandleFunction --function timehi --callback_data ehitim
+ShellBot.regHandleFunction --function clarosks --callback_data sksclaro
+ShellBot.regHandleFunction --function claroehi --callback_data ehiclaro
 unset keyboard1
 keyboard1="$(ShellBot.InlineKeyboardMarkup -b 'botao1')"
 while :; do
