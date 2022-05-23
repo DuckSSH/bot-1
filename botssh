@@ -14,9 +14,9 @@ ShellBot.username
 # - Funcao menu
 menu() {
     local msg
-        msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
+        msg="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n"
         msg+="<b>🤖 OLA SEJA BEM VINDO(a) 🤖</b>\n"
-        msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=\n\n"
+        msg+="=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=×=\n\n"
         msg+="Gere seu teste agora mesmo!"
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
         --text "$(echo -e $msg)" \
@@ -35,7 +35,7 @@ criarteste() {
     usuario=$(echo SSH$(( RANDOM% + 250 )))
     senha=$((RANDOM% + 999999))
     limite='1'
-    tempo='4'
+    tempo='6'
     tuserdate=$(date '+%C%y/%m/%d' -d " +2 days")
     useradd -M -N -s /bin/false $usuario -e $tuserdate > /dev/null 2>&1
     (echo "$senha";echo "$senha") | passwd $usuario > /dev/null 2>&1
@@ -146,6 +146,8 @@ ShellBot.InlineKeyboardButton --button 'botao1' --line 4 --text '🔰 CLARO SKS 
 ShellBot.InlineKeyboardButton --button 'botao1' --line 4 --text '🔰 CLARO EHI 🔰' --callback_data '4ehienviar'
 ShellBot.InlineKeyboardButton --button 'botao1' --line 5 --text '🔰 VIVO SKS 🔰' --callback_data '5sksenviar'
 ShellBot.InlineKeyboardButton --button 'botao1' --line 5 --text '🔰 VIVO EHI 🔰' --callback_data '6ehienviar'
+ShellBot.InlineKeyboardButton --button 'botao1' --line 1 --text '👨‍💻COMPRE AQUI👨‍💻'  --callback_data '2' --url 't.me/Onumb_bot' # privado
+ShellBot.InlineKeyboardButton --button 'botao1' --line 2 --text '⚠️ TERMOS ⚠️'  --callback_data '3' --url 'https://bitbin.it/WUwitdNa/raw/' # termos
 ShellBot.regHandleFunction --function criarteste --callback_data gerarssh
 ShellBot.regHandleFunction --function enviarapp --callback_data appenviar
 ShellBot.regHandleFunction --function enviarsks1 --callback_data 1sksenviar
