@@ -65,7 +65,7 @@ enviarapp() {
         --document "@/root/base.apk" \
     return 0
 }
-    #vivo sks
+#vivo sks
 vivosks() {
     ShellBot.answerCallbackQuery --callback_query_id ${callback_query_id[$id]} \
         --text "♻️ ENVIANDO ARQUIVO SKS..."
